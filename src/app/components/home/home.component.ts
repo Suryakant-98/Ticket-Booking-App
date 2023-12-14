@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit{
   loadAllStation() {
     this.stationService.getAllStations().subscribe((res: ResModel) => {
       this.stationList = res.data; 
-      console.log(res)
     }, error => {
       alert("Error Occured" + JSON.stringify(error))
     })

@@ -8,7 +8,7 @@ import { SearchComponent } from './components/search/search.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,12 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     BookingComponent,
     AdminComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
