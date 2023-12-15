@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ResModel, Station } from 'src/app/models/station';
 import { StationsService } from 'src/app/services/stations.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,14 @@ import { StationsService } from 'src/app/services/stations.service';
 export class HomeComponent implements OnInit{
   stationList: Station[] = [];
 
-  constructor(private stationService: StationsService) {
+  travelObj: any = {
+    fromStationId:'',
+    toStationId:'',
+    dateOfTravel:''
+  } ;
+
+  constructor(private stationService: StationsService,
+    private router: Router) {
 
   }
 
@@ -25,6 +33,10 @@ export class HomeComponent implements OnInit{
       alert("Error Occured" + JSON.stringify(error))
     })
 
+  }
+
+  onSearch() {
+    this.router.navigate(['/search',this.travelObj.fromStationId,this.travelObj.toStationId,this.travelObj.dateOfTravel])
   }
 
 }

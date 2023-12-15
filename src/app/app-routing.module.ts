@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { TrainsComponent } from './components/trains/trains.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'search',
+    path:'search/:fromStationId/:toStationId/:dateOfTravel',
     component: SearchComponent
   },
   {
@@ -26,7 +27,11 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
-  }
+  },
+  {
+    path:'trains',
+    component:TrainsComponent
+   }
 ];
 
 @NgModule({

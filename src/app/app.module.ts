@@ -9,6 +9,7 @@ import { BookingComponent } from './components/booking/booking.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TrainsComponent } from './components/trains/trains.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     SearchComponent,
     BookingComponent,
     AdminComponent,
+    TrainsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

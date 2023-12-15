@@ -1,3 +1,3 @@
 export const environment = {
-    APiEndPoint: 'https://freeapi.miniprojectideas.com/api/TrainApp/'
+  ApiEndPoint: 'https://freeapi.miniprojectideas.com/api/TrainApp/'
 };

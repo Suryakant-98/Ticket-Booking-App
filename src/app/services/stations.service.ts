@@ -9,7 +9,7 @@ import { ResModel, Station } from '../models/station';
   providedIn: 'root',
 })
 export class StationsService {
-  private apiEndPoint: string = environment.APiEndPoint;
+  private apiEndPoint: string = environment.ApiEndPoint;
 
   constructor(private http: HttpClient) {}
 
